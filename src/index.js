@@ -14,5 +14,8 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if(!array || array.length < 1) return 0;
+  let sorted = array.reduce(function(sum,item){ return sum+item});
+  let sortedAvg = sorted / array.length;
+  return sortedAvg;
 }
